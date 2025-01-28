@@ -1,59 +1,22 @@
-## Parking Space Monitoring System using OpenCV
-This project is a Parking Space Monitoring System that uses OpenCV (Open Source Computer Vision Library) to analyze a video feed from a car park and determine the availability of parking spaces. The system processes the video frames, applies image processing techniques, and then identifies the number of free parking spaces in real-time.
+# **ParkFinder: Parking Space Monitoring System**
 
+**ParkFinder** is a real-time parking space monitoring system that uses **OpenCV** to analyze a video feed from a car park, detecting free and occupied parking spaces. The system processes video frames, applies image processing techniques, and provides real-time parking availability updates.
 
-## Requirements
+## **How it Works**
+1. The system loads a video feed (e.g., `carPark.mp4`) and predefined parking space positions (stored in `CarParkPos` using Pickle).
+2. It processes each video frame by converting it to grayscale, applying Gaussian Blur, adaptive thresholding, median blur, and dilation to detect parking spaces.
+3. The system counts non-zero pixels in each parking space to determine if it’s free or occupied.
+4. The output video displays rectangles around each parking space, indicating its status.
 
-Clone this project 
-```
- git clone https://github.com/TheODDYSEY/Parking-OpenCv.git
-```
+## **Libraries Used**
+- **Python 3.x**
+- **OpenCV (cv2)**: For image processing and video feed handling.
+- **NumPy**: For numerical operations.
+- **Pickle**: For serializing and loading parking space position data.
+- **CVZone**: For enhanced computer vision functionality.
 
-To run this project, you will need the following software and libraries:
-
-1.Python 3.x
-2.OpenCV (cv2)
-3.NumPy (numpy)
-4.Pickle (pickle)
-CVZone (cvzone)
-
-You can install the required libraries using pip:
-```
-pip install opencv-python numpy pickle-mixin cvzone
-```
-cd into the project folder
-
-Run this command :
-```
-python main.py
-```
-
-## Usage
-Download the project files, including the car park video (carPark.mp4) and the serialized position data (CarParkPos).
-Make sure you have the required libraries installed (see Requirements).
-Execute the Python script (parking_space_monitoring.py).
-The script will load the video and process each frame to determine the number of free parking spaces.
-The output will display the video with rectangles drawn around parking spaces, indicating their status (free or occupied).
-How it works
-The system uses pre-defined parking space positions (stored in CarParkPos using Pickle) to extract individual parking spaces from each video frame.
-
-The system converts the color frame into a grayscale image and applies Gaussian Blur to reduce noise and enhance the image.
-
-It then converts the grayscale image into a binary image (white lines on a black background) using adaptive thresholding.
-
-To remove remaining noise pixels, a median blur operation is performed on the binary image.
-
-A dilation operation is applied to the image to make the parking spaces more prominent and to fill any gaps.
-
-For each parking space, the number of non-zero (white) pixels is counted in the binary image. Fewer non-zero pixels indicate a free parking space, and more pixels indicate an occupied parking space.
-
-The number of free parking spaces is displayed on the output video, along with rectangles drawn around each parking space, representing their status (free or occupied).
-
-## References
-OpenCV: https://opencv.org/
-NumPy: https://numpy.org/
-Pickle: https://docs.python.org/3/library/pickle.html
-CVZone: https://github.com/cvzone/cvzone
-Note: The CarParkPos file should contain the serialized list of parking space positions (x, y coordinates) that are relevant to the provided car park video. This file is crucial for the correct functioning of the system, and its format should be compatible with the pickle.load() function. Make sure to provide the correct file with the accurate parking space positions to get accurate results.
-
-Additionally, this project assumes the video file is present in the specified path (./media/carPark.mp4). If the video is not available or the path is incorrect, the system may not work as expected. Please ensure that the video is accessible before running the script.
+## **References**
+- [OpenCV](https://opencv.org/)
+- [NumPy](https://numpy.org/)
+- [Pickle](https://docs.python.org/3/library/pickle.html)
+- [CVZone](https://github.com/cvzone/cvzone)
