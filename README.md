@@ -22,8 +22,8 @@ This project is a web application that detects and counts free and occupied park
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/adityajha2005/ParkFinderPro
-cd ParkFinderPro
+git clone https://github.com/adityajha2005/FindMySpot
+cd FindMySpot
 ```
 
 ### 2. Install Dependencies
