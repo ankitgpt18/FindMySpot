@@ -22,7 +22,7 @@ This project is a web application that detects and counts free and occupied park
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/adityajha2005/FindMySpot
+git clone https://github.com/ankitgpt18/FindMySpot
 cd FindMySpot
 ```
 
