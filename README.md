@@ -85,11 +85,3 @@ You can install the dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
-
-## Contributing
-
-Feel free to submit issues, fork the repository, and send pull requests.
-
----
-
-Feel free to modify the above content to suit your project's specific details and requirements!
